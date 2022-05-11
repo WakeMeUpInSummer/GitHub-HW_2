@@ -1,0 +1,116 @@
+GitHub. HW_2
+
+1. На локальном репозитории сделать ветки для Postman, Jmeters, CheckLists, Ba Reports,
+SQL, Charles, Mobile testing:
+
+Делаем на внешнем репозитории новый репозиторий, называем Branches. Туда потом
+будем делать все ветки (чтоб не потерять). Клонируем себе на локальный. В него:
+
+- Postman
+
+git branch Postman
+
+- Jmeter
+
+git branch Jmeter
+
+- CheckLists
+
+git branch CheckLists
+
+- Bag Reports
+
+git branch Bag_Reports
+
+- SQL
+
+git branch SQL
+
+- Charles
+
+git branch Charles
+
+- Mobile testing
+
+git branch Mobile_testing
+
+2. Запушить все ветки на внешний репозиторий
+
+со всеми ветками, сделанными на main на локальном, делаем по-очереди:
+
+git push -u origin Postman
+git push -u origin Jmeter
+git push -u origin CheckLists
+git push -u origin Bag_Reports
+git push -u origin SQL
+git push -u origin Charles
+git push -u origin Mobile_testing
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+
+1) git checkout Bag_Reports
+2) touch BagStructure.txt
+3) vim BagStructure.txt
+
+Bug Report Structure
+
+1) Summary :
+2) Severity :
+3) Priority :
+4) Status :
+5) Environment :
+6) Steps to Reproduce :
+7) Actual Result :
+8) Expected Result :
+9) Attachment:
+
+Сохраняем, выходим.
+
+4. Запушить структуру багрепорта на внешний репозиторий
+
+1) git add BagStructure.txt
+2) git commit -m "new file BagStructure"
+3) git push
+
+5. Вмержить ветку Bag Reports в Main
+
+1) git checkout main
+2) git merge Bag_Reports
+
+6. Запушить main на внешний репозиторий.
+
+1)git push 
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+1) git checkout CheckLists
+2) touch CheckListsStructure.txt
+3) vim CheckListsStructure.txt
+
+CheckListsStructure
+
+1) Site can be opened
+2) Main elements work correctly
+3) There is no mistakes in Console
+4) Pages can be opened and work correctly
+5) No defects on main page
+
+Сохраняем, выходим.
+
+8. Запушить структуру на внешний репозиторий
+
+1) git add CheckListsStructure.txt
+2) git commit -m "new file CheckListsStructure"
+3) git push
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+1) Compare & pull request
+2) Create pull request
+3) Merge pull request
+4) Confirm merge
+
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
+git pull
